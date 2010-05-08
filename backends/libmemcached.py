@@ -86,3 +86,6 @@ class CacheClass(BaseCache):
 
     def close(self, **kwargs):
         self._cache.disconnect_all()
+    
+    def clear(self):
+        self._cache.flush_all()
